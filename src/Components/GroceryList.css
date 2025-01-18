@@ -1,8 +1,8 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif; /* Modern font choice */
-    background: url('BG.jpg') no-repeat center center fixed;
-    background-size: cover;
+    /* background: url('BG.jpg') no-repeat center center fixed;
+    background-size: cover; */
     margin: 0;
     padding: 0;
     display: flex;

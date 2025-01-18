@@ -20,19 +20,20 @@ const GroceryList = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setGroceryItems([...groceryItems, formData]);
+
+        setFormData({
+            itemName: "",
+            quantity: "",
+            category: "",
+        });
 
         if (!formData.itemName || !formData.quantity || !formData.category) {
             alert("Please fill out all fields before submitting!");
             return;
         }
 
-        // setGroceryItems([...groceryItems, formData]);
-
-        // setFormData({
-        //     itemName: "",
-        //     quantity: "",
-        //     category: "",
-        // });
+        
         try{
             const response = await fetch("https://expressnodeappapi.azurewebsites.net/submit", {
                 method: "POST",
