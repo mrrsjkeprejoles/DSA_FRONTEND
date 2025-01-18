@@ -33,28 +33,28 @@ const GroceryList = () => {
             quantity: "",
             category: "",
         });
-        // try{
-        //     const response = await fetch("https://mjprejolesapi.azurewebsites.net/submit", {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json",
+        try{
+            const response = await fetch("https://happy-river-03abd7a00.4.azurestaticapps.net/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
 
-        //         },
-        //         body: JSON.stringify(formData),
-        //     });
-        //     if(response.ok){
-        //         const result = await response.json();
-        //         alert("form submitted successfully");
-        //         console.log("API response:", result);
-        //         console.log("form submission successful");
-        //     } else {
-        //         alert("failed to submit");
-        //         console.error("API Error", response.statusText)
-        //     }
-        // } catch(error){
-        //     alert("an error occurred");
-        //     console.error("error", error);
-        // }
+                },
+                body: JSON.stringify(formData),
+            });
+            if(response.ok){
+                const result = await response.json();
+                alert("form submitted successfully");
+                console.log("API response:", result);
+                console.log("form submission successful");
+            } else {
+                alert("failed to submit");
+                console.error("API Error", response.statusText)
+            }
+        } catch(error){
+            alert("an error occurred");
+            console.error("error", error);
+        }
     };
 
     return (
