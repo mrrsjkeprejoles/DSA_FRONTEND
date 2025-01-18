@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font choice */
+    background: url('BG.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+    overflow: hidden;
+}
+
+
+
+/* Main Container */
+.grocery-container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff; /* White card background */
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.grocery-card h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50; /* Darker color for emphasis */
+}
+
+.grocery-card p {
+    font-size: 1rem;
+    color: #7f8c8d; /* Light grey for the subtitle */
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between fields */
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #34495e;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #dcdfe6;
+    border-radius: 12px;
+    background-color: #070707;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input:focus, select:focus {
+    border-color: #3498db;
+    background-color: #0c0c0c;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2); /* Subtle focus shadow */
+    outline: none;
+}
+
+button.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient button */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.submit-btn:hover {
+    background: linear-gradient(135deg, #5a0dbc, #1b63e0);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grocery List */
+.grocery-list {
+    margin-top: 40px;
+    width: 100%;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 20px;
+}
+
+.grocery-list h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid #dcdfe6;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background-color: #f9fafc;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+li:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+li span {
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grocery-container {
+        padding: 20px;
+    }
+
+    button.submit-btn {
+        font-size: 0.9rem;
+    }
+}
