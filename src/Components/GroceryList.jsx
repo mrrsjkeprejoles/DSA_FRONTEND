@@ -26,13 +26,13 @@ const GroceryList = () => {
             return;
         }
 
-        setGroceryItems([...groceryItems, formData]);
+        // setGroceryItems([...groceryItems, formData]);
 
-        setFormData({
-            itemName: "",
-            quantity: "",
-            category: "",
-        });
+        // setFormData({
+        //     itemName: "",
+        //     quantity: "",
+        //     category: "",
+        // });
         try{
             const response = await fetch("https://expressnodeappapi.azurewebsites.net/submit", {
                 method: "POST",
