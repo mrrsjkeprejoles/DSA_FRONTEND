@@ -34,7 +34,7 @@ const GroceryList = () => {
             category: "",
         });
         try{
-            const response = await fetch("https://expressnodeappapi.azurewebsites.net/submit", {
+            const response = await fetch("https://backennnd-exb3e2bje0facrfc.southeastasia-01.azurewebsites.net/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
